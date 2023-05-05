@@ -29,9 +29,12 @@ fn main() {
     #[cfg(feature = "editor")]
     app.add_plugin(EditorPlugin::default()); // only available if the "editor" feature is enabled
 
+    info!("Welcome to {}!", APP_TITLE);
+
     app.run();
 }
 
-fn setup() {
-    println!("Welcome to {}!", APP_TITLE);
+fn setup(mut commands: Commands) {
+    // Spawn a 2D camera
+    commands.spawn(Camera2dBundle::default());
 }

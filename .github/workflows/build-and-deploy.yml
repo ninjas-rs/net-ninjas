@@ -20,10 +20,12 @@ jobs:
         with:
           version: 'latest'
       - name: Build
-        run: trunk build --release
+        run: trunk build --release --no-default-features
+        working-directory: client/
       - name: Push Dist Folder
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: dist
           directory: dist/
+          directory: client/dist/

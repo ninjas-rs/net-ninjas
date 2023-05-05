@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build
 
 on:
   push:
@@ -24,9 +24,3 @@ jobs:
       - name: Build
         run: trunk build --release --no-default-features
         working-directory: client/
-      - name: Push Dist Folder
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.TOKEN }}
-          branch: dist
-          directory: client/dist/

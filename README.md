@@ -1,5 +1,7 @@
 # Net Ninjas 🥷
 
+> ⚠️ This is a work in progress.
+
 A multiplayer bevy based game which can be played in the browser.
 
 ## How to build

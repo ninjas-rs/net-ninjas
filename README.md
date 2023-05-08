@@ -11,13 +11,13 @@ A multiplayer bevy based game which can be played in the browser.
 ### Native
 
 ```
-$ cargo build --release
+$ cargo build --release --no-default-features
 ```
 
 ### Web
 
 ```
-$ trunk build --no-default-features
+$ trunk build --release --no-default-features
 ```
 
 > You can then serve the `index.html` file in the `dist` folder.

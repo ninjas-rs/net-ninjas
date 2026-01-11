@@ -2788,6 +2788,20 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "92ecc6618181def0457392ccd0ee51198e065e016d1d527a7ac1b6dc7c1f09d2"
 
 [[package]]
+name = "iyes_progress"
+version = "0.15.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6c7c87908d0cd670e3f4c716ca68b3bc3b56ea2c3ea581068bb0b0d6c632293f"
+dependencies = [
+ "bevy_app",
+ "bevy_ecs",
+ "bevy_platform",
+ "bevy_state",
+ "derive_more",
+ "parking_lot",
+]
+
+[[package]]
 name = "jni"
 version = "0.21.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3135,6 +3149,7 @@ dependencies = [
  "bevy",
  "bevy_asset_loader",
  "bevy_screen_diagnostics",
+ "iyes_progress",
  "log",
 ]
 

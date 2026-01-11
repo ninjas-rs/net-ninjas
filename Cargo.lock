@@ -168,6 +168,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "anyhow"
+version = "1.0.100"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a23eb6b1614318a8071c9b2521f36b424b2c83db5eb3a0fead4a6c0809af6e61"
+
+[[package]]
 name = "approx"
 version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -473,6 +479,36 @@ dependencies = [
  "wasm-bindgen",
  "wasm-bindgen-futures",
  "web-sys",
+]
+
+[[package]]
+name = "bevy_asset_loader"
+version = "0.24.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "472306c894bee7f562442dffbcd8e10c8c48ec0239e8b4af9c13c240340ab2ab"
+dependencies = [
+ "anyhow",
+ "bevy_app",
+ "bevy_asset",
+ "bevy_asset_loader_derive",
+ "bevy_ecs",
+ "bevy_log",
+ "bevy_platform",
+ "bevy_reflect",
+ "bevy_state",
+ "bevy_utils",
+ "path-slash",
+]
+
+[[package]]
+name = "bevy_asset_loader_derive"
+version = "0.24.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "228284d057a86657530cc0a96176b699b031cfba4bbe303f1b92938a5d66f831"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -1212,6 +1248,14 @@ dependencies = [
  "serde",
  "thiserror 2.0.17",
  "uuid",
+]
+
+[[package]]
+name = "bevy_screen_diagnostics"
+version = "0.8.1"
+source = "git+https://github.com/GlennMacdonald/bevy_screen_diagnostics.git?rev=51345e28a450c257c852ab22ad6ddb0013dfbb30#51345e28a450c257c852ab22ad6ddb0013dfbb30"
+dependencies = [
+ "bevy",
 ]
 
 [[package]]
@@ -3089,6 +3133,8 @@ name = "net-ninjas"
 version = "0.1.0"
 dependencies = [
  "bevy",
+ "bevy_asset_loader",
+ "bevy_screen_diagnostics",
  "log",
 ]
 
@@ -3531,6 +3577,12 @@ name = "paste"
 version = "1.0.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
+
+[[package]]
+name = "path-slash"
+version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1e91099d4268b0e11973f036e885d652fb0b21fedcf69738c627f94db6a44f42"
 
 [[package]]
 name = "percent-encoding"

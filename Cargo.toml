@@ -5,10 +5,16 @@ edition = "2024"
 
 [dependencies]
 bevy = { version = "0.17.3", features = [] }
+bevy_asset_loader = "0.24.0"
+bevy_screen_diagnostics = "0.8.1"
 log = { version = "*", features = ["max_level_debug", "release_max_level_warn"] }
 
+[patch.crates-io]
+bevy_screen_diagnostics = { git = 'https://github.com/GlennMacdonald/bevy_screen_diagnostics.git', rev="51345e28a450c257c852ab22ad6ddb0013dfbb30" }
+
 [features]
-default = ["dynamic"]
+default = ["dynamic", "diagnostics"]
+diagnostics = []
 dynamic = ["bevy/dynamic_linking"]
 
 # Enable a small amount of optimization in the dev profile.
